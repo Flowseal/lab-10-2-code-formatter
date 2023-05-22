@@ -47,7 +47,7 @@ BEGIN
                 THEN
                   BEGIN
                     READ(EndCh, EndCh2, EndCh3);
-                    WHILE EndCh3 = ' ' {Между точкой и END могут быть пробелы}
+                    WHILE EndCh3 = ' ' {Между точкой и END могут быть пробелы - избавляемся от них}
                     DO
                       READ(EndCh3);
                     IF EndCh3 = '.' {Если последний символ - точка, то это конец программы}
